@@ -10,7 +10,7 @@ info.onLifeZero(function () {
 })
 let projectile: Sprite = null
 info.setLife(3)
-scene.setBackgroundColor(1)
+scene.setBackgroundColor(7)
 let Player_sprite = sprites.create(img`
     . . . . f f f f f f . . . . . . 
     . . . f 2 f e e e e f f . . . . 
@@ -34,7 +34,7 @@ game.setGameOverPlayable(true, music.melodyPlayable(music.beamUp), false)
 game.setGameOverEffect(true, effects.blizzard)
 game.setGameOverEffect(false, effects.melt)
 game.setGameOverMessage(false, "you lost ):")
-game.setGameOverMessage(true, "good job! you figured out the code!")
+game.setGameOverMessage(true, "you found the code!")
 music.play(music.createSong(hex`0078000408070306001c00010a006400f401640000040000000000000000000000000000000002180030003c0001243c004800012548005800012458006800012707001c00020a006400f401640000040000000000000000000000000000000003060024003000011908001c000e050046006603320000040a002d0000006400140001320002010002240000001000011d10002000012268007000011d70007800011978008000011d800088000122`), music.PlaybackMode.LoopingInBackground)
 game.onUpdateInterval(1000, function () {
     projectile = sprites.createProjectileFromSide(img`
@@ -57,6 +57,102 @@ game.onUpdateInterval(1000, function () {
         `, 50, 0)
     projectile.setPosition(0, randint(0, scene.screenHeight()))
     projectile.setFlag(SpriteFlag.AutoDestroy, true)
+    if (10000 < game.runtime()) {
+        scene.setBackgroundColor(5)
+        projectile = sprites.createProjectileFromSide(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e e e e e . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, 100, 0)
+        projectile.setPosition(0, randint(0, scene.screenHeight()))
+        projectile.setFlag(SpriteFlag.AutoDestroy, true)
+    }
+    if (20000 < game.runtime()) {
+        scene.setBackgroundColor(2)
+        projectile = sprites.createProjectileFromSide(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e e e e e . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, 150, 0)
+        projectile.setPosition(0, randint(0, scene.screenHeight()))
+        projectile.setFlag(SpriteFlag.AutoDestroy, true)
+    }
+    if (30000 < game.runtime()) {
+        scene.setBackgroundColor(10)
+        projectile = sprites.createProjectileFromSide(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e e e e e . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, 200, 0)
+        projectile.setPosition(0, randint(0, scene.screenHeight()))
+        projectile.setFlag(SpriteFlag.AutoDestroy, true)
+    }
+    if (40000 < game.runtime()) {
+        scene.setBackgroundColor(15)
+        projectile = sprites.createProjectileFromSide(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e e e e e . . . . . . . . 
+            . . . e e e e . . . . . . . . . 
+            . . . e . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, 300, 0)
+        projectile.setPosition(0, randint(0, scene.screenHeight()))
+        projectile.setFlag(SpriteFlag.AutoDestroy, true)
+    }
+    if (50000 < game.runtime()) {
+        game.setGameOverMessage(true, "You win!")
+        game.gameOver(true)
+    }
 })
 game.onUpdateInterval(3000, function () {
 	
