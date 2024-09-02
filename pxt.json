@@ -1,5 +1,5 @@
 {
-    "name": "figure out the code!",
+    "name": "Survive 60 seconds",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -22,7 +22,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.41",
+        "target": "1.12.56",
         "targetId": "arcade"
     },
     "supportedTargets": [
